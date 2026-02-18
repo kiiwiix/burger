@@ -1,0 +1,138 @@
+:root {
+  --bg: #f7f2ea;
+  --paper: #fffdf9;
+  --ink: #222;
+  --muted: #6c6c6c;
+  --accent: #7a2f24;
+  --line: #d9c8b2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, #f7f2ea, #efe1cd);
+  color: var(--ink);
+}
+
+.a4 {
+  width: min(980px, 92vw);
+  margin: 24px auto;
+  background: var(--paper);
+  border-radius: 20px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
+  padding: 28px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 7vw, 62px);
+  letter-spacing: 0.08em;
+}
+
+.line {
+  width: 180px;
+  height: 2px;
+  background: var(--line);
+  margin: 10px auto;
+}
+
+.sub {
+  color: var(--muted);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  font-size: 0.86rem;
+}
+
+.menu {
+  display: grid;
+  gap: 18px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  border: 1px solid #eadfce;
+  border-radius: 14px;
+  padding: 16px;
+  align-items: center;
+  background: #fff;
+}
+
+.left {
+  display: grid;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1;
+}
+
+.slogan {
+  color: #3f3f3f;
+  font-weight: 500;
+}
+
+.ingredients {
+  display: grid;
+  gap: 4px;
+  color: #2f2f2f;
+  font-size: 0.95rem;
+}
+
+.ingredients span::before {
+  content: '• ';
+  color: var(--accent);
+}
+
+.photo {
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1ede6;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.theme-chamoisard {
+  border-color: #dec6a6;
+  background: linear-gradient(180deg, #fffefc 0%, #fcf3e8 100%);
+}
+
+@media (max-width: 760px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+
+  .photo {
+    height: 200px;
+  }
+}
